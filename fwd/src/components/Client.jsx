@@ -14,15 +14,18 @@ class Client extends React.Component {
     handleGet() {
         clientService.getProducts().then(data => {
             this.setState({
-                products: [data]
+                products: data
             })
+            console.log(this.state)
         })
     }
 
     render() {
         return(
             <div>
-                {this.state.products}
+                {this.state.products.map((product)=>(
+                    <li>{product.id}</li>
+                ))}
             </div>
         )
     }
