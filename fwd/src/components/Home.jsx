@@ -9,6 +9,8 @@ class Home extends React.Component {
         return (
             <div>
                 <a href="/clients">Sono un cliente</a>
+                <br/>
+                <a href="/kitchen">Sono un cuoco</a>
             </div>
         )
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import clientService from "../services/clientService";
+import mainService from "../services/mainService";
 
 class Client extends React.Component {
     constructor(props) {
@@ -12,7 +12,7 @@ class Client extends React.Component {
     }
 
     handleGet() {
-        clientService.getProducts().then(data => {
+        mainService.getProducts().then(data => {
             this.setState({
                 products: data
             })
@@ -22,6 +22,7 @@ class Client extends React.Component {
     render() {
         return(
             <div>
+                <p>Lista prodotti</p>
                 {this.state.products.map((product)=>(
                     <li>{product.id}</li>
                 ))}
