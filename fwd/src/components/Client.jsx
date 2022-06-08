@@ -16,7 +16,6 @@ class Client extends React.Component {
             this.setState({
                 products: data
             })
-            console.log(this.state)
         })
     }
 
